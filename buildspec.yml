@@ -10,7 +10,7 @@ phases:
       - echo Starting build at `date`
       - echo Building the Docker image...          
       - docker build -t coworking:$IMAGE_TAG .
-      - docker tag coworking-repository:$IMAGE_TAG 773453802440.dkr.ecr.us-east-1.amazonaws.com/coworking:$IMAGE_TAG      
+      - docker tag coworking:$IMAGE_TAG 773453802440.dkr.ecr.us-east-1.amazonaws.com/coworking:$IMAGE_TAG      
   post_build:
     commands:
       - echo Completed build at `date`
